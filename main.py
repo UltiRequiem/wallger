@@ -1,5 +1,6 @@
 import configparser
 import os
+import importlib
 
 config = configparser.ConfigParser()
 
@@ -9,9 +10,13 @@ monitor_long = config.get("monitor","long")
 monitor_height = config.get("monitor","height")
 provider = config.get("monitor","provider")
 
-if __name__ == "__main__":
+def dynamic_import(module):
+    return importlib.import_module(module)
+
+if __name__ == '__main__':
     try:
-        from providers.unsplash import main
-        main(monitor_long,monitor_height)
-    except:
-         print("An exception occurred")
+        provider = f"providers.{provider}"
+        module = dynamic_import(provider)
+        module.main(monitor_long,monitor_height)
+    except: 
+        print("An exception occurred")
