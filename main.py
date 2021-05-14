@@ -8,7 +8,7 @@ config_path = config.read(os.path.expanduser("~/.config/wm-wallpaper-changer/con
 
 monitor_long = config.get("monitor","long")
 monitor_height = config.get("monitor","height")
-provider = config.get("monitor","provider")
+provider = config.get("wallpaper","provider")
 provider = f"providers.{provider}"
 
 def dynamic_import(module):
