@@ -4,7 +4,7 @@ class Provider():
     """
     Require:monitor long,monitor_height and url.
     """
-    def __init__(self,monitor_long,monitor_height,url):
+    def __init__(self,monitor_long,monitor_height,url, topic):
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.url = url

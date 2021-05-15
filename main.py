@@ -3,7 +3,6 @@ import os
 import importlib
 
 config = configparser.ConfigParser()
-
 config_path = config.read(os.path.expanduser("~/.config/wm-wallpaper-changer/config"))
 
 monitor_long = config.get("monitor","long")
