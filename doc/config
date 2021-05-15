@@ -1,3 +1,4 @@
+### Example config ###
 [monitor]
 long:1600
 height:900
@@ -5,3 +6,9 @@ height:900
 [wallpaper]
 provider:unsplash
 tag:anime
+
+# Possible providers: Wallhaven and Unsplash
+# Unsplash don't support tags, but please don't leave the field empty
+# I still don't implement the resolutions in Wallhaven, but again, don't leave the field empty
+
+# TODO: More options and implement resolutions in Wallhaven

@@ -8,9 +8,9 @@ class Provider():
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.url = url
+        self.topic = topic
 
     def download(self):
         with open("random.jpg", "wb") as file:
             response = requests.get(self.url)
             file.write(response.content)
-
