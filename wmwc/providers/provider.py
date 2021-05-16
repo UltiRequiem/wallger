@@ -1,13 +1,11 @@
 import requests
 
-
 class Provider:
-    def __init__(self, monitor_long, monitor_height, url, topic):
+    def __init__(self, monitor_long, monitor_height, topic,save):
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
-        self.url = url
         self.topic = topic
-
+"""
     def download_image(self):
         with open("random.jpg", "wb") as file:
             response = requests.get(self.url)
@@ -17,3 +15,4 @@ class Provider:
         with open("data.json", "wb") as file:
             response = requests.get(self.url)
             file.write(response.content)
+            """
