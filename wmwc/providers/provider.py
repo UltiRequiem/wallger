@@ -1,7 +1,8 @@
 import requests
 
-class Provider():
-    def __init__(self,monitor_long,monitor_height,url, topic):
+
+class Provider:
+    def __init__(self, monitor_long, monitor_height, url, topic):
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.url = url

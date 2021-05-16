@@ -6,7 +6,8 @@ from . import provider
 url = "https://wallhaven.cc/api/v1/search?q="
 json_url = f"{url}{topic}"
 
-def main(unused_one, unused_two,topic):
+
+def main(unused_one, unused_two, topic):
     pass
 
 

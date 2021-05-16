@@ -1,10 +1,12 @@
 from . import provider
 import os
 
+
 url = "https://source.unsplash.com/random/"
 
-def main(monitor_long,monitor_height):
-    unsplash = provider.Provider(monitor_long,monitor_height,url, "ignore")
+
+def main(monitor_long, monitor_height):
+    unsplash = provider.Provider(monitor_long, monitor_height, url, "ignore")
     unsplash.download_image()
 
     name_of_file = "random.jpg"
