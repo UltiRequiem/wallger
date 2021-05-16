@@ -5,6 +5,7 @@ class Provider:
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.topic = topic
+        self.save = save
 """
     def download_image(self):
         with open("random.jpg", "wb") as file:

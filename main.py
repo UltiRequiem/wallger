@@ -1,5 +1,5 @@
 from wmwc.functions.get_config import get_config
-from wmwc.functions.generate_class import generate_class
+from wmwc.functions.dynamic_import import dynamic_import
 
 """ Monitor Details """
 monitor_long = get_config("monitor", "long")
@@ -22,5 +22,12 @@ options = {
     "save": save,
 }
 
-if __name__ == "__main__":    
-    print(generate_class(options))
+provider_module = f"providers.{provider}"
+
+
+if __name__ == "__main__":
+    try:
+        module = dynamic_import(provider)
+        module.run(options)
+    except:
+        print("An exception ocurred.")
