@@ -5,10 +5,14 @@ height:900
 
 [wallpaper]
 provider:unsplash
-tag:anime
+local:/home/zero/Disk/Sabare/Wallpapers
+topic:skullgirls
+nfsw:false
+
+[misc]
+save:true
 
 # Possible providers: Wallhaven and Unsplash
-# Unsplash don't support tags, but please don't leave the field empty
-# I still don't implement the resolutions in Wallhaven, but again, don't leave the field empty
+# Unsplash don't suport tags or nfsw.
 
 # TODO: More options and implement resolutions in Wallhaven
