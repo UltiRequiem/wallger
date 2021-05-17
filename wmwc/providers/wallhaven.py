@@ -1,19 +1,20 @@
-import json
-import random
-import os
-from . import provider
-
 url = "https://wallhaven.cc/api/v1/search?q="
-json_url = f"{url}{topic}"
+#json_url = f"{url}{topic}"
 
 
-def main(unused_one, unused_two, topic):
-    pass
+
+def run(options):
+    print(options)
 
 
 # TODO FINISH THIS
 
 """
+import json
+import random
+import os
+from . import provider
+
 def main(unused_one, unused_two,topic):
     data_url = f"{url}{topic}"
     

@@ -1,19 +1,19 @@
 import requests
+import shutil
+
 
 class Provider:
-    def __init__(self, monitor_long, monitor_height, topic,save):
+    def __init__(self, monitor_long, monitor_height, topic, save, url, filename):
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.topic = topic
         self.save = save
-"""
-    def download_image(self):
-        with open("random.jpg", "wb") as file:
-            response = requests.get(self.url)
-            file.write(response.content)
+        self.url = url
+        self.filename = filename
 
-    def download_text(self):
-        with open("data.json", "wb") as file:
-            response = requests.get(self.url)
-            file.write(response.content)
-            """
+    def download(self, mode):
+        r = requests.get(self.url, stream=True)
+        if r.status_code == 200:
+            r.raw.decode_content = True
+            with open(self.filename,mode) as f:
+                shutil.copyfileobj(r.raw, f)

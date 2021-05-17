@@ -1,6 +1,7 @@
 from wmwc.functions.get_config import get_config
 from wmwc.functions.dynamic_import import dynamic_import
 
+
 """ Monitor Details """
 monitor_long = get_config("monitor", "long")
 monitor_height = get_config("monitor", "height")
@@ -22,12 +23,12 @@ options = {
     "save": save,
 }
 
-provider_module = f"providers.{provider}"
+provider_module = f"wmwc.providers.{provider}"
 
 
 if __name__ == "__main__":
     try:
-        module = dynamic_import(provider)
+        module = dynamic_import(provider_module)
         module.run(options)
-    except:
-        print("An exception ocurred.")
+    except Exception as e:
+        print(f"Oops!, {e} ocurred")
