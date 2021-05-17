@@ -8,6 +8,7 @@ monitor_height = get_config("monitor", "height")
 
 """ Wallpapers Details"""
 provider = get_config("wallpaper", "provider")
+local = get_config("wallpaper","local")
 topic = get_config("wallpaper", "topic")
 nfsw = get_config("wallpaper", "nfsw")
 
@@ -18,6 +19,7 @@ options = {
     "monitor_long": monitor_long,
     "monitor_height": monitor_height,
     "provider": provider,
+    "local":local,
     "topic": topic,
     "nfsw": nfsw,
     "save": save,
