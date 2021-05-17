@@ -1,10 +1,21 @@
+from wmwc.functions.generate_class import generate_class
+from urllib.request import urlopen
+
 url = "https://wallhaven.cc/api/v1/search?q="
 #json_url = f"{url}{topic}"
 
+def get_image(something):
+    # bedtime 
+    pass
+
+def set_class(options):
+    url = f"url{options['topic']}"
+    wallhaven = generate_class(options, url,"random")
+    return wallhaven
 
 
 def run(options):
-    print(options)
+    wallhaven = set_class(options)
 
 
 # TODO FINISH THIS
