@@ -1,6 +1,6 @@
 from json import load
 from random import choice
-from os import system
+from subprocess import DEVNULL, STDOUT, check_call
 from wmwc.functions.generate_class import generate_class
 
 search_url = "https://wallhaven.cc/api/v1/search?q="
@@ -12,7 +12,7 @@ def get_image_link(json_url):
 
 
 def get_json(txt_url):
-    system(f"curl {txt_url} --output data.json")
+    check_call(['curl',f'{txt_url}','--output','data.json'], stdout=DEVNULL, stderr=STDOUT)
     with open("./data.json", "r") as read_file:
         data = load(read_file)
     return data
