@@ -1,7 +1,7 @@
-import importlib
+from importlib import import_module
 
 def dynamic_import(module):
     try:
-        return importlib.import_module(module)
+        return import_module(module)
     except ImportError as e:
         print(f"Oops {e} ocurred.")

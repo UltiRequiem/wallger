@@ -1,8 +1,8 @@
-import configparser
+from configparser import ConfigParser
 from os.path import expanduser
 
 """ Get User Config """
-config = configparser.ConfigParser()
+config = ConfigParser()
 CONFIG_PATH = config.read(expanduser("~/.config/wm-wallpaper-changer/config"))
 
 def get_config(secction, option):

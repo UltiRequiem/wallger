@@ -1,5 +1,5 @@
-import json
-import random
+from json import load
+from random import choice
 from os import system
 from wmwc.functions.generate_class import generate_class
 
@@ -14,12 +14,12 @@ def get_image_link(json_url):
 def get_json(txt_url):
     system(f"curl {txt_url} --output data.json")
     with open("./data.json", "r") as read_file:
-        data = json.load(read_file)
+        data = load(read_file)
     return data
 
 
 def select_image(json):
-    number = random.choice(range(0, len(json["data"])))
+    number = choice(range(0, len(json["data"])))
     image_link = json["data"][number]["path"]
     return image_link
 

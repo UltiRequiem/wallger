@@ -1,11 +1,12 @@
 from wmwc.functions.generate_class import generate_class
-import os
-import random
+from os import popen
+from random import choice
 
 def set_class(options):
     global filename
     url = options["local"]
-    filename = random.choice(os.popen(f"ls {url}").read().split())
+    filename = choice(popen(f"ls {url}").read().split())
+    print(filename)
     return generate_class(options, url, filename)
 
 
