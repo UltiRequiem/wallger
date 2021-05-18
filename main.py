@@ -1,30 +1,17 @@
 from wmwc.functions.get_config import get_config
 from wmwc.functions.dynamic_import import dynamic_import
 
-""" Monitor Details """
-monitor_long = get_config("monitor", "long")
-monitor_height = get_config("monitor", "height")
-
-""" Wallpapers Details"""
-provider = get_config("wallpaper", "provider")
-local = get_config("wallpaper","local")
-topic = get_config("wallpaper", "topic")
-nfsw = get_config("wallpaper", "nfsw")
-
-""" Others """
-save = get_config("misc", "save")
-
 options = {
-    "monitor_long": monitor_long,
-    "monitor_height": monitor_height,
-    "provider": provider,
-    "local":local,
-    "topic": topic,
-    "nfsw": nfsw,
-    "save": save,
+    "monitor_long": get_config("monitor", "long"),
+    "monitor_height": get_config("monitor", "height"),
+    "provider": get_config("wallpaper", "provider"),
+    "local": get_config("wallpaper", "local"),
+    "topic": get_config("wallpaper", "topic"),
+    "nfsw": get_config("wallpaper", "nfsw"),
+    "save": get_config("misc", "save"),
 }
 
-provider_module = f"wmwc.providers.{provider}"
+provider_module = f"wmwc.providers.{options['provider']}"
 
 
 if __name__ == "__main__":

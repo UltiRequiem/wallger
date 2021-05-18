@@ -3,7 +3,6 @@ from os import popen
 from random import choice
 
 def set_class(options):
-    global filename
     url = options["local"]
     filename = choice(popen(f"ls {url}").read().split())
     return generate_class(options, url, filename)

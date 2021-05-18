@@ -24,8 +24,7 @@ def select_image(json):
     return image_link
 
 def set_class(options,image_link):
-    wallhaven = generate_class(options,image_link,"random")
-    return wallhaven
+    return generate_class(options,image_link,"random")
 
 def run(options):
     image_link = get_image_link(f"{search_url}{options['topic']}")

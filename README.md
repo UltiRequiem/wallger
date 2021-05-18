@@ -5,14 +5,14 @@
 <img src="https://user-images.githubusercontent.com/71897736/118586389-3fcbdb00-b760-11eb-93e8-ba29f97a31f4.gif" width="5000"/>
 </a>
 </div>
-_(To see a better quality version click on the gif)_
+__(To see a better quality version click on the gif)__
 
 ## Install Instructions
 - Clone the repository somewhere:
 ```bash
 git clone https://github.com/ultirequiem/wmwc ~/Documents/wmwc
 ```
-- Clone the example [config](./doc/config) in `~/.config/wm-wallpaper-changer`:
+- Copy the example [config](./doc/config) in `~/.config/wm-wallpaper-changer`:
 ```bash
 cp ~/Documents/wmwc/doc/config ~/.config/wm-wallpaper-changer/config
 ```

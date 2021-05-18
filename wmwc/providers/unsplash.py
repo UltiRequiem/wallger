@@ -1,12 +1,13 @@
 from wmwc.functions.generate_class import generate_class
 from urllib.request import urlopen
 
+
 def set_class(options):
     url = urlopen(
         f"https://source.unsplash.com/random/{options['monitor_long']}x{options['monitor_height']}"
     ).geturl()
-    unsplash = generate_class(options, url,"random")
-    return unsplash
+    return generate_class(options, url, "random")
+
 
 def run(options):
     unsplash = set_class(options)
