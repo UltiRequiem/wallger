@@ -1,0 +1,13 @@
+### Example config ###
+[monitor]
+long:1600
+height:900
+
+[wallpaper]
+provider:unsplash
+local:/home/zero/Disk/Sabare/Wallpapers
+topic:skullgirls
+nfsw:false
+
+[misc]
+save:true

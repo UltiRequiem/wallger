@@ -3,7 +3,11 @@ from os.path import expanduser
 
 """ Get User Config """
 config = ConfigParser()
-CONFIG_PATH = config.read(expanduser("~/.config/wm-wallpaper-changer/config"))
+
+try:
+    CONFIG_PATH = config.read(expanduser("~/.config/wm-wallpaper-changer/config"))
+except IOError:
+    CONFIG_PATH = config.read(expanduser("../../doc/exampleconfig"))
 
 def get_config(secction, option):
     try:
