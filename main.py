@@ -1,7 +1,5 @@
 from wmwc.functions.get_config import get_config
 from wmwc.functions.dynamic_import import dynamic_import
-
-
 """ Monitor Details """
 monitor_long = get_config("monitor", "long")
 monitor_height = get_config("monitor", "height")
@@ -33,4 +31,4 @@ if __name__ == "__main__":
         module = dynamic_import(provider_module)
         module.run(options)
     except Exception as e:
-        print(f"Oops!, {e} ocurred")
+        print(f"Oops!, {e} ocurred.")

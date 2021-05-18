@@ -1,43 +1,35 @@
-from wmwc.functions.generate_class import generate_class
-from urllib.request import urlopen
-
-url = "https://wallhaven.cc/api/v1/search?q="
-#json_url = f"{url}{topic}"
-
-def get_image(something):
-    # bedtime 
-    pass
-
-def set_class(options):
-    url = f"url{options['topic']}"
-    wallhaven = generate_class(options, url,"random")
-    return wallhaven
-
-
-def run(options):
-    wallhaven = set_class(options)
-
-
-# TODO FINISH THIS
-
-"""
 import json
 import random
-import os
-from . import provider
+from os import system
+from wmwc.functions.generate_class import generate_class
 
-def main(unused_one, unused_two,topic):
-    data_url = f"{url}{topic}"
-    
-    wallhaven = provider.Provider(unused_one,unused_two,url, "ignore")
-    os.popen(f"curl {data_url} --output data.json")
+search_url = "https://wallhaven.cc/api/v1/search?q="
+
+
+def get_image_link(json_url):
+    json = get_json(json_url)
+    return select_image(json)
+
+
+def get_json(txt_url):
+    system(f"curl {txt_url} --output data.json")
     with open("./data.json", "r") as read_file:
         data = json.load(read_file)
-    number = random.choice(range(0, len(data["data"])))
-    alist = data["data"]
-    image = alist[number]['path']
-    name_of_file = "image.jpg"
-    os.popen(f"curl {image} --output {name_of_file}")
-    path_to_file = os.path.join(os.getcwd(), name_of_file) # This gives full path: /home/username/etc
-    os.system(f"feh --bg-fill {path_to_file}")
-    """
+    return data
+
+
+def select_image(json):
+    number = random.choice(range(0, len(json["data"])))
+    image_link = json["data"][number]["path"]
+    return image_link
+
+def set_class(options,image_link):
+    wallhaven = generate_class(options,image_link,"random")
+    return wallhaven
+
+def run(options):
+    image_link = get_image_link(f"{search_url}{options['topic']}")
+    wallhaven = set_class(options,image_link)
+    wallhaven.download("wb")
+    path = wallhaven.get_path_image()
+    wallhaven.setup_image(path)

@@ -5,7 +5,6 @@ from os.path import expanduser
 config = configparser.ConfigParser()
 CONFIG_PATH = config.read(expanduser("~/.config/wm-wallpaper-changer/config"))
 
-
 def get_config(secction, option):
     try:
         return config.get(secction, option)
