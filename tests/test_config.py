@@ -9,6 +9,8 @@ import main
 msg = "Should be one of them."
 PROVIDERS = ["wallhaven", "unsplash", "local"]
 
+if main.options["provider"] not in PROVIDERS:
+    its_github = True
 
 class TestConfig(unittest.TestCase):
     def test_providers(self):
