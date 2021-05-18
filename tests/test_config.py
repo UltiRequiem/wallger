@@ -12,19 +12,19 @@ PROVIDERS = ["wallhaven", "unsplash", "local"]
 
 class TestConfig(unittest.TestCase):
     def test_providers(self):
-        self.assertIn(main.provider.lower(), PROVIDERS, msg)
+        self.assertIn(main.options["provider"].lower(), PROVIDERS, msg)
 
     def test_monitor_long(self):
-        self.assertTrue(main.monitor_long.isnumeric())
+        self.assertTrue(main.options["monitor_long"].isnumeric())
 
     def test_monitor_height(self):
-        self.assertTrue(main.monitor_height.isnumeric())
+        self.assertTrue(main.options["monitor_height"].isnumeric())
 
     def test_topic(self):
-        self.assertFalse(main.topic.isnumeric())
+        self.assertFalse(main.options["topic"].isnumeric())
 
     def test_purity(self):
-        self.assertIn(main.nfsw.lower(), ["true", "false"], msg)
+        self.assertIn(main.options["nfsw"].lower(), ["true", "false"], msg)
 
 
 if __name__ == "__main__":
