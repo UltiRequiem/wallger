@@ -6,7 +6,6 @@ def set_class(options):
     global filename
     url = options["local"]
     filename = choice(popen(f"ls {url}").read().split())
-    print(filename)
     return generate_class(options, url, filename)
 
 

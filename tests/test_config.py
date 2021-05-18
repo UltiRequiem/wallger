@@ -1,8 +1,14 @@
 import unittest
-from .. import main
+import sys, os, inspect
+# TODO: This is working but I don't like it
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+import main
 
 msg = "Should be one of them."
-PROVIDERS = ["wallhaven", "unsplash"]
+PROVIDERS = ["wallhaven", "unsplash", "local"]
+
 
 class TestConfig(unittest.TestCase):
     def test_providers(self):

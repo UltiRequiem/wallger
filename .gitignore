@@ -1,5 +1,6 @@
 env/
 .vim/
+__pycache__/
 wmwc/__pycache__
 wmwc/functions/__pycache__
 wmwc/providers/__pycache__

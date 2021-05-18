@@ -37,3 +37,4 @@ save:true
 provider:local
 local:/home/zero/Disk/Sabare/Wallpapers
 # Don't use "~"
+# TODO: Accept "~"
