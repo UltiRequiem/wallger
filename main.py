@@ -1,5 +1,6 @@
 from wmwc.functions.get_config import get_config
 from wmwc.functions.dynamic_import import dynamic_import
+
 """ Monitor Details """
 monitor_long = get_config("monitor", "long")
 monitor_height = get_config("monitor", "height")
