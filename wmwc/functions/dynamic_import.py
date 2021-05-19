@@ -1,5 +1,6 @@
 from importlib import import_module
 
+
 def dynamic_import(module):
     try:
         return import_module(module)

@@ -11,12 +11,10 @@ options = {
     "save": get_config("misc", "save"),
 }
 
-provider_module = f"wmwc.providers.{options['provider']}"
-
 
 if __name__ == "__main__":
     try:
-        module = dynamic_import(provider_module)
+        module = dynamic_import(f"wmwc.providers.{options['provider']}")
         module.run(options)
     except Exception as e:
         print(f"Oops!, {e} ocurred.")
