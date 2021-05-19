@@ -21,7 +21,7 @@ cp ~/Documents/wmwc/doc/config ~/.config/wm-wallpaper-changer/config
 You can investigate a little more about the parameters that the configuration receives in [docs](./doc).
 - Set an alias:
 ```bash
-echo alias wmwc='python3 ~/Documents/wmwc/main.py' > ~/.bashrc
+echo alias wmwc='python3 ~/Documents/wmwc/main.py' >> ~/.bashrc
 ```
 Done! Now you can call `wmwc` everywhere.
 If you want to see some interesting use cases check [this](./doc/README.md#interesting-uses).
