@@ -9,6 +9,10 @@
 <em>(To see a better quality version click on the gif)</em>
 
 ## Install Instructions
+- Install `feh`:
+```bash
+sudo pacman -S feh
+```
 - Clone the repository somewhere:
 ```bash
 git clone https://github.com/ultirequiem/wmwc ~/Documents/wmwc
