@@ -1,10 +1,12 @@
-from wmwc import helpers
 from urllib.request import urlopen
 
+from wmwc import helpers
+
+URL = "https://source.unsplash.com/random/"
 
 def set_class(options):
     url = urlopen(
-        f"https://source.unsplash.com/random/{options['monitor_long']}x{options['monitor_height']}"
+        f"URL{options['monitor_long']}x{options['monitor_height']}"
     ).geturl()
     return helpers.generate_class(options, url, "random")
 

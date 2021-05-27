@@ -2,7 +2,7 @@ from requests import get
 from random import choice
 from wmwc import helpers
 
-search_url = "https://wallhaven.cc/api/v1/search?q="
+SEARCH_URL = "https://wallhaven.cc/api/v1/search?q="
 
 
 def get_image_link(json_url):
@@ -19,7 +19,7 @@ def set_class(options, image_link):
 
 
 def run(options):
-    image_link = get_image_link(f"{search_url}{options['topic']}")
+    image_link = get_image_link(f"{SEARCH_URL}{options['topic']}")
     wallhaven = set_class(options, image_link)
     wallhaven.download("wb")
     path = wallhaven.get_path_image()

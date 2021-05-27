@@ -4,6 +4,15 @@ from os.path import dirname, expanduser, isfile
 
 from wmwc.providers.provider import Provider
 
+def generate_class(options, url, filename):
+    return Provider(
+        options["monitor_long"],
+        options["monitor_height"],
+        options["topic"],
+        options["save"],
+        url,
+        filename,
+    )
 
 def dynamic_import(module):
     try:
@@ -29,12 +38,4 @@ def get_config(secction, option):
         return "none"
 
 
-def generate_class(options, url, filename):
-    return Provider(
-        options["monitor_long"],
-        options["monitor_height"],
-        options["topic"],
-        options["save"],
-        url,
-        filename,
-    )
+

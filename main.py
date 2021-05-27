@@ -13,7 +13,6 @@ options = {
 
 if __name__ == "__main__":
     try:
-        module = helpers.dynamic_import(f"wmwc.providers.{options['provider']}")
-        module.run(options)
+        helpers.set_image(options)
     except Exception as exception:
         print(f"Oops!, {exception} ocurred.")
