@@ -1,4 +1,5 @@
 import unittest
+
 from wmwc import helpers
 
 msg = "Should be one of them."
@@ -15,8 +16,6 @@ options = {
     "save": helpers.get_config("misc", "save"),
 }
 
-if options["provider"] not in PROVIDERS:
-    its_github = True
 
 class TestConfig(unittest.TestCase):
     def test_providers(self):

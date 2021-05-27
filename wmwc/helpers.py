@@ -1,8 +1,14 @@
 from configparser import ConfigParser
 from importlib import import_module
-from os.path import dirname, expanduser, isfile
+from os.path import expanduser
 
 from wmwc.providers.provider import Provider
+
+config = ConfigParser()
+
+config_path = expanduser("~/.config/wm-wallpaper-changer/config")
+config.read(config_path)
+
 
 
 def get_config(secction, option):
@@ -30,15 +36,6 @@ def dynamic_import(module):
         print(f"Oops {error} ocurred.")
 
 
-config = ConfigParser()
-
-config_path = expanduser("~/.config/wm-wallpaper-changer/config")
-
-if isfile(config_path):
-    CONFIG_PATH = config.read(config_path)
-else:
-    CONFIG_PATH = config.read(f"{dirname(__file__)}/../../doc/if_no_config")
-
 
 def set_image(options):
     provider = options["provider"]
@@ -48,4 +45,7 @@ def set_image(options):
             run(options)
         case "unsplash":
             from wmwc.providers.unsplash import run
+            run(options)
+        case "local":
+            from wmwc.providers.local import run
             run(options)
