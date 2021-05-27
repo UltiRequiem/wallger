@@ -26,4 +26,13 @@ class Provider:
         return path_to_file
 
     def setup_image(self, file_path):
-        system(f"feh --bg-fil {file_path}")
+        system_env = self.system
+        match system_env:
+            case "wm":
+                system(f"feh --bg-fil {file_path}")
+            case "gnome":
+                system("pass")
+            case "kde":
+                system("pass")
+            case "mate":
+                system("pass")
