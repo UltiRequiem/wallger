@@ -10,6 +10,8 @@ options = {
     "save": helpers.get_config("misc", "save"),
 }
 
+print(options["monitor_long"])
+print(options["monitor_height"])
 
 if __name__ == "__main__":
     try:

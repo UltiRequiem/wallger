@@ -4,14 +4,16 @@ from os.path import expanduser
 
 from wmwc.providers.provider import Provider
 
-try:
-    with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
-        json_data =  json.load(json_data)
-except FileNotFoundError:
-    print("No config") #TODO: Add more documentation
+def get_config_file():
+    try:
+        with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
+            return  json.load(json_data)
+    except FileNotFoundError:
+        print("No config") #TODO: Add more documentation
 
 
 def get_config(secction, option):
+    json_data = get_config_file()
     try:
         return json_data[secction][option]
     except:
