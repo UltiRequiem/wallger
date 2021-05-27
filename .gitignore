@@ -9,3 +9,6 @@ random
 image.jpg
 notes
 data.json
+build/
+dist/
+wmwc.egg-info/

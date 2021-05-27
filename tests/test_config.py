@@ -1,32 +1,38 @@
 import unittest
-import sys, os, inspect
-# TODO: This is working but I don't like it
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
-import main
+from wmwc import helpers
 
 msg = "Should be one of them."
 PROVIDERS = ["wallhaven", "unsplash", "local"]
 
-if main.options["provider"] not in PROVIDERS:
+
+options = {
+    "monitor_long": helpers.get_config("monitor", "long"),
+    "monitor_height": helpers.get_config("monitor", "height"),
+    "provider": helpers.get_config("wallpaper", "provider"),
+    "local": helpers.get_config("wallpaper", "local"),
+    "topic": helpers.get_config("wallpaper", "topic"),
+    "nfsw": helpers.get_config("wallpaper", "nfsw"),
+    "save": helpers.get_config("misc", "save"),
+}
+
+if options["provider"] not in PROVIDERS:
     its_github = True
 
 class TestConfig(unittest.TestCase):
     def test_providers(self):
-        self.assertIn(main.options["provider"].lower(), PROVIDERS, msg)
+        self.assertIn(options["provider"].lower(), PROVIDERS, msg)
 
     def test_monitor_long(self):
-        self.assertTrue(main.options["monitor_long"].isnumeric())
+        self.assertTrue(options["monitor_long"].isnumeric())
 
     def test_monitor_height(self):
-        self.assertTrue(main.options["monitor_height"].isnumeric())
+        self.assertTrue(options["monitor_height"].isnumeric())
 
     def test_topic(self):
-        self.assertFalse(main.options["topic"].isnumeric())
+        self.assertFalse(options["topic"].isnumeric())
 
     def test_purity(self):
-        self.assertIn(main.options["nfsw"].lower(), ["true", "false"], msg)
+        self.assertIn(options["nfsw"].lower(), ["true", "false"], msg)
 
 
 if __name__ == "__main__":
