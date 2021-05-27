@@ -32,6 +32,6 @@ class Provider:
                 system(f"feh --bg-fil {file_path}")
                 print(file_path)
             case "gnome":
-                system("gsettings set org.gnome.desktop.background picture-uri 'file://{}'")
+                system(f"gsettings set org.gnome.desktop.background picture-uri 'file://{file_path}'")
             case "mate":
-                system("gsettings set org.mate.background picture-filename 'file://{}'")
+                system(f"gsettings set org.mate.background picture-filename 'file://{file_path}'")
