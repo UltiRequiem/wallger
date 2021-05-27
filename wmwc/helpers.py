@@ -4,6 +4,14 @@ from os.path import dirname, expanduser, isfile
 
 from wmwc.providers.provider import Provider
 
+
+def get_config(secction, option):
+    try:
+        return config.get(secction, option)
+    except:
+        return "none"
+
+
 def generate_class(options, url, filename):
     return Provider(
         options["monitor_long"],
@@ -13,6 +21,7 @@ def generate_class(options, url, filename):
         url,
         filename,
     )
+
 
 def dynamic_import(module):
     try:
@@ -31,11 +40,12 @@ else:
     CONFIG_PATH = config.read(f"{dirname(__file__)}/../../doc/if_no_config")
 
 
-def get_config(secction, option):
-    try:
-        return config.get(secction, option)
-    except:
-        return "none"
-
-
-
+def set_image(options):
+    provider = options["provider"]
+    match provider:
+        case "wallhaven":
+            from wmwc.providers.wallhaven import run
+            run(options)
+        case "unsplash":
+            from wmwc.providers.unsplash import run
+            run(options)
