@@ -17,6 +17,10 @@ sudo pacman -S feh
 ```bash
 git clone https://github.com/ultirequiem/wmwc ~/Documents/wmwc
 ```
+- Install the requirements:
+```bash
+cd ~/Documents/wmwc ; pip3 install -r requirements.txt
+```
 - Copy the example [config](./doc/config) in `~/.config/wm-wallpaper-changer`:
 ```bash
 cp ~/Documents/wmwc/doc/config ~/.config/wm-wallpaper-changer/config
