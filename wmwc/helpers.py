@@ -1,19 +1,19 @@
-from configparser import ConfigParser
+import json
 from importlib import import_module
 from os.path import expanduser
 
 from wmwc.providers.provider import Provider
 
-config = ConfigParser()
-
-config_path = expanduser("~/.config/wm-wallpaper-changer/config")
-config.read(config_path)
-
+try:
+    with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
+        json_data =  json.load(json_data)
+except FileNotFoundError:
+    print("No config") #TODO: Add more documentation
 
 
 def get_config(secction, option):
     try:
-        return config.get(secction, option)
+        return json_data[secction][option]
     except:
         return "none"
 
