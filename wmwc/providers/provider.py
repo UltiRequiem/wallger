@@ -1,16 +1,18 @@
-from requests import get
+from os import getcwd, path, system
 from shutil import copyfileobj
-from os import getcwd, system, path
+
+from requests import get
 
 
 class Provider:
-    def __init__(self, monitor_long, monitor_height, topic, save, url, filename):
+    def __init__(self, monitor_long, monitor_height, topic, save, url, filename,system):
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.topic = topic
         self.save = save
         self.url = url
         self.filename = filename
+        self.system =  system
 
     def download(self, mode):
         r = get(self.url, stream=True)

@@ -8,6 +8,7 @@ options = {
     "topic": helpers.get_config("wallpaper", "topic"),
     "nfsw": helpers.get_config("wallpaper", "nfsw"),
     "save": helpers.get_config("misc", "save"),
+    "system":helpers.get_config("misc","system")
 }
 
 if __name__ == "__main__":

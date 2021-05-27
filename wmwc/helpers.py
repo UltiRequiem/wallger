@@ -4,6 +4,7 @@ from os.path import expanduser
 
 from wmwc.providers.provider import Provider
 
+
 def get_config_file():
     try:
         with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
@@ -28,6 +29,8 @@ def generate_class(options, url, filename):
         options["save"],
         url,
         filename,
+        options["system"],
+
     )
 
 
