@@ -1,20 +1,19 @@
-from wmwc.functions.get_config import get_config
-from wmwc.functions.dynamic_import import dynamic_import
+from wmwc import helpers
 
 options = {
-    "monitor_long": get_config("monitor", "long"),
-    "monitor_height": get_config("monitor", "height"),
-    "provider": get_config("wallpaper", "provider"),
-    "local": get_config("wallpaper", "local"),
-    "topic": get_config("wallpaper", "topic"),
-    "nfsw": get_config("wallpaper", "nfsw"),
-    "save": get_config("misc", "save"),
+    "monitor_long": helpers.get_config("monitor", "long"),
+    "monitor_height": helpers.get_config("monitor", "height"),
+    "provider": helpers.get_config("wallpaper", "provider"),
+    "local": helpers.get_config("wallpaper", "local"),
+    "topic": helpers.get_config("wallpaper", "topic"),
+    "nfsw": helpers.get_config("wallpaper", "nfsw"),
+    "save": helpers.get_config("misc", "save"),
 }
 
 
 if __name__ == "__main__":
     try:
-        module = dynamic_import(f"wmwc.providers.{options['provider']}")
+        module = helpers.dynamic_import(f"wmwc.providers.{options['provider']}")
         module.run(options)
-    except Exception as e:
-        print(f"Oops!, {e} ocurred.")
+    except Exception as exception:
+        print(f"Oops!, {exception} ocurred.")

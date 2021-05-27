@@ -1,6 +1,6 @@
 from requests import get
 from random import choice
-from wmwc.functions.generate_class import generate_class
+from wmwc import helpers
 
 search_url = "https://wallhaven.cc/api/v1/search?q="
 
@@ -15,7 +15,7 @@ def select_image(json):
 
 
 def set_class(options, image_link):
-    return generate_class(options, image_link, "random")
+    return helpers.generate_class(options, image_link, "random")
 
 
 def run(options):
