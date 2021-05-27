@@ -31,7 +31,7 @@ class Provider:
             case "wm":
                 system(f"feh --bg-fil {file_path}")
             case "gnome":
-                system("pass")
+                system("gsettings set org.gnome.desktop.background picture-uri file://{file_path}")
             case "kde":
                 system("pass")
             case "mate":
