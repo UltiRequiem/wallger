@@ -23,7 +23,7 @@ cd ~/Documents/wmwc ; pip3 install -r requirements.txt
 ```
 - Copy the example [config](./doc/config) in `~/.config/wm-wallpaper-changer`:
 ```bash
-cp ~/Documents/wmwc/doc/config ~/.config/wm-wallpaper-changer/config
+cp ~/Documents/wmwc/doc/config.json ~/.config/wm-wallpaper-changer/config.json
 ```
 - Choose the Wallpaper provider you want and place the resolution of your monitor in the configuration file.
 You can investigate a little more about the parameters that the configuration receives in [docs](./doc).
