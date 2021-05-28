@@ -44,13 +44,12 @@ def dynamic_import(module):
 
 def set_image(options):
     provider = options["provider"]
-    match provider:
-        case "wallhaven":
-            from wmwc.providers.wallhaven import run
-            run(options)
-        case "unsplash":
-            from wmwc.providers.unsplash import run
-            run(options)
-        case "local":
-            from wmwc.providers.local import run
-            run(options)
+    if provider ==  "wallhaven":
+        from wmwc.providers.wallhaven import run
+        run(options)
+    if provider == "unsplash":
+        from wmwc.providers.unsplash import run
+        run(options)
+    if provider == "local":
+        from wmwc.providers.local import run
+        run(options)
