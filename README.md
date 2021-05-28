@@ -1,4 +1,5 @@
 # The Wallpaper changer for Window Managers
+**You need Python 3.10 for this to work.**
 
 <div align="center">
 <a href="https://youtu.be/tNCVx82oKSQ">
