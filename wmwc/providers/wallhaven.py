@@ -1,5 +1,7 @@
-from requests import get
 from random import choice
+
+from requests import get
+
 from wmwc import helpers
 
 SEARCH_URL = "https://wallhaven.cc/api/v1/search?q="
@@ -19,8 +21,8 @@ def set_class(options, image_link):
 
 
 def run(options):
-    image_link = get_image_link(f"{SEARCH_URL}{options['topic']}")
+    custom_link = f"{SEARCH_URL}{options['topic']}&atleast={options['monitor_long']}x{options['monitor_height']}&sorting=random"
+    image_link = get_image_link(custom_link)
     wallhaven = set_class(options, image_link)
     wallhaven.download("wb")
-    path = wallhaven.get_path_image()
-    wallhaven.setup_image(path)
+    wallhaven.setup_image(wallhaven.get_path_image())

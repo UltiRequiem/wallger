@@ -26,11 +26,9 @@ class Provider:
         return path_to_file
 
     def setup_image(self, file_path):
-        system_env = self.system
-        match system_env:
+        match self.system:
             case "wm":
                 system(f"feh --bg-fil {file_path}")
-                print(file_path)
             case "gnome":
                 system(f"gsettings set org.gnome.desktop.background picture-uri 'file://{file_path}'")
             case "mate":
