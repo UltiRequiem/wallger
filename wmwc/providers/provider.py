@@ -5,7 +5,19 @@ from requests import get
 
 
 class Provider:
+    """Provider."""
+
     def __init__(self, monitor_long, monitor_height, topic, save, url, filename,system):
+        """__init__.
+
+        :param monitor_long:
+        :param monitor_height:
+        :param topic:
+        :param save:
+        :param url:
+        :param filename:
+        :param system:
+        """
         self.monitor_long = monitor_long
         self.monitor_height = monitor_height
         self.topic = topic
@@ -15,6 +27,10 @@ class Provider:
         self.system =  system
 
     def download(self, mode):
+        """download.
+
+        :param mode:
+        """
         r = get(self.url, stream=True)
         if r.status_code == 200:
             r.raw.decode_content = True
@@ -22,10 +38,15 @@ class Provider:
                 copyfileobj(r.raw, f)
 
     def get_path_image(self):
+        """get_path_image."""
         path_to_file = path.join(getcwd(), self.filename)
         return path_to_file
 
     def setup_image(self, file_path):
+        """setup_image.
+
+        :param file_path:
+        """
         match self.system:
             case "wm":
                 system(f"feh --bg-fil {file_path}")

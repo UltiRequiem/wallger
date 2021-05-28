@@ -6,6 +6,7 @@ from wmwc.providers.provider import Provider
 
 
 def get_config_file():
+    """get_config_file."""
     try:
         with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
             return  json.load(json_data)
@@ -14,6 +15,11 @@ def get_config_file():
 
 
 def get_config(secction, option):
+    """get_config.
+
+    :param secction:
+    :param option:
+    """
     json_data = get_config_file()
     try:
         return json_data[secction][option]
@@ -22,6 +28,12 @@ def get_config(secction, option):
 
 
 def generate_class(options, url, filename):
+    """generate_class.
+
+    :param options:
+    :param url:
+    :param filename:
+    """
     return Provider(
         options["monitor_long"],
         options["monitor_height"],
@@ -35,6 +47,10 @@ def generate_class(options, url, filename):
 
 
 def dynamic_import(module):
+    """dynamic_import.
+
+    :param module:
+    """
     try:
         return import_module(module)
     except ImportError as error:
@@ -43,6 +59,10 @@ def dynamic_import(module):
 
 
 def set_image(options):
+    """set_image.
+
+    :param options:
+    """
     provider = options["provider"]
     match provider:
         case "wallhaven":

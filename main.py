@@ -1,3 +1,4 @@
+"""Import common functions"""
 from wmwc import helpers
 
 options = {
