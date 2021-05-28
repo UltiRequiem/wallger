@@ -1,5 +1,6 @@
 # The Wallpaper changer for Window Managers
-**You need Python 3.10 for this to work.**
+**You need Python 3.10 or superior for this to work.**
+If you don't have this version of python please check [this branch](https://github.com/UltiRequiem/wmwc/tree/support-old-python).
 
 <div align="center">
 <a href="https://youtu.be/GtO8Rp69gHw">
