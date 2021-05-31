@@ -74,3 +74,5 @@ def set_image(options):
         case "local":
             from wmwc.providers.local import run
             run(options)
+        case _:
+            print("You have put a wrong provider in your configuration, or maybe it's just misspelled.")
