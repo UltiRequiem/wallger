@@ -10,7 +10,7 @@ Base Wallhaven API url
 SEARCH_URL = "https://wallhaven.cc/api/v1/search?q="
 
 
-def get_image_link(json_url:str)->str:
+def get_image_link(json_url: str) -> str:
     """get_image_link.
 
     :param json_url:

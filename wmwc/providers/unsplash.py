@@ -7,6 +7,7 @@ Base Unsplash URL
 """
 URL = "https://source.unsplash.com/random/"
 
+
 def set_class(options):
     """set_class.
 

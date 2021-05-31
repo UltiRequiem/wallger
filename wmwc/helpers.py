@@ -1,5 +1,5 @@
-import json
 from importlib import import_module
+import json
 from os.path import expanduser
 
 from wmwc.providers.provider import Provider
