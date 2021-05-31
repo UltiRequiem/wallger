@@ -2,11 +2,7 @@
 **You need Python 3.10 or superior for this to work.**
 If you don't have this version of python please check [this branch](https://github.com/UltiRequiem/wmwc/tree/support-old-python).
 
-<div align="center">
-<a href="https://youtu.be/GtO8Rp69gHw">
-<img src="https://user-images.githubusercontent.com/71897736/119916869-f67f4680-bf2a-11eb-9a52-7ab90169bf95.gif" width="5000"/>
-</a>
-</div>
+https://user-images.githubusercontent.com/71897736/119916777-c59f1180-bf2a-11eb-9eb2-5a27c42fc7a8.mp4
 
 <em>(To see a better quality version click on the gif)</em>
 
