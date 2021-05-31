@@ -5,7 +5,6 @@ from wmwc import helpers
 msg = "Should be one of them."
 PROVIDERS = ["wallhaven", "unsplash", "local"]
 
-
 options = {
     "monitor_long": helpers.get_config("monitor", "long"),
     "monitor_height": helpers.get_config("monitor", "height"),

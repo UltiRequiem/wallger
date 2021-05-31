@@ -2,6 +2,9 @@ from urllib.request import urlopen
 
 from wmwc import helpers
 
+"""
+Base Unsplash URL
+"""
 URL = "https://source.unsplash.com/random/"
 
 def set_class(options):

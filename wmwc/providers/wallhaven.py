@@ -4,6 +4,9 @@ from requests import get
 
 from wmwc import helpers
 
+"""
+Base Wallhaven API url
+"""
 SEARCH_URL = "https://wallhaven.cc/api/v1/search?q="
 
 
