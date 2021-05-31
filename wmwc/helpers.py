@@ -11,10 +11,10 @@ def get_config_file():
         with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
             return  json.load(json_data)
     except FileNotFoundError:
-        print("No config") #TODO: Add more documentation
+        print("No config.") #TODO: Add more documentation
 
 
-def get_config(secction, option):
+def get_config(secction:str, option:dict) -> str:
     """get_config.
 
     :param secction:
@@ -27,7 +27,7 @@ def get_config(secction, option):
         return "none"
 
 
-def generate_class(options, url, filename):
+def generate_class(options:dict, url:str, filename:str) -> object:
     """generate_class.
 
     :param options:
@@ -46,7 +46,7 @@ def generate_class(options, url, filename):
     )
 
 
-def dynamic_import(module):
+def dynamic_import(module: str):
     """dynamic_import.
 
     :param module:
@@ -58,7 +58,7 @@ def dynamic_import(module):
 
 
 
-def set_image(options):
+def set_image(options: dict):
     """set_image.
 
     :param options:

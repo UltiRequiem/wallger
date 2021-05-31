@@ -10,7 +10,7 @@ Base Wallhaven API url
 SEARCH_URL = "https://wallhaven.cc/api/v1/search?q="
 
 
-def get_image_link(json_url):
+def get_image_link(json_url:str)->str:
     """get_image_link.
 
     :param json_url:
@@ -19,7 +19,7 @@ def get_image_link(json_url):
     return select_image(json)
 
 
-def select_image(json):
+def select_image(json) -> str:
     """select_image.
 
     :param json:
@@ -27,7 +27,7 @@ def select_image(json):
     return json["data"][choice(range(0, len(json["data"])))]["path"]
 
 
-def set_class(options, image_link):
+def set_class(options, image_link) -> object:
     """set_class.
 
     :param options:
