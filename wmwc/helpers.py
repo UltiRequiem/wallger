@@ -5,7 +5,7 @@ from os.path import expanduser
 from wmwc.providers.provider import Provider
 
 
-def get_config_file():
+def get_config_file() -> object:
     """get_config_file."""
     try:
         with open(
@@ -16,7 +16,7 @@ def get_config_file():
         print("No config.")  # TODO: Add more documentation
 
 
-def get_config(secction: str, option: dict) -> str:
+def get_config(secction: str, option: object) -> str:
     """get_config.
 
     :param secction:
