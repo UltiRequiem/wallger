@@ -4,7 +4,7 @@ from random import choice
 from wmwc import helpers
 
 
-def set_class(options):
+def set_class(options:object) -> object:
     """set_class.
 
     :param options:
@@ -14,7 +14,7 @@ def set_class(options):
     return helpers.generate_class(options, url, filename)
 
 
-def run(options):
+def run(options:object):
     """run.
 
     :param options:

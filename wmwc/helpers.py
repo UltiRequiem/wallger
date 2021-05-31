@@ -8,13 +8,15 @@ from wmwc.providers.provider import Provider
 def get_config_file():
     """get_config_file."""
     try:
-        with open(expanduser("~/.config/wm-wallpaper-changer/config.json"),'r') as json_data:
-            return  json.load(json_data)
+        with open(
+            expanduser("~/.config/wm-wallpaper-changer/config.json"), "r"
+        ) as json_data:
+            return json.load(json_data)
     except FileNotFoundError:
-        print("No config.") #TODO: Add more documentation
+        print("No config.")  # TODO: Add more documentation
 
 
-def get_config(secction:str, option:dict) -> str:
+def get_config(secction: str, option: dict) -> str:
     """get_config.
 
     :param secction:
@@ -27,13 +29,14 @@ def get_config(secction:str, option:dict) -> str:
         return "none"
 
 
-def generate_class(options:dict, url:str, filename:str) -> object:
+def generate_class(options: object, url: str, filename: str) -> object:
     """generate_class.
 
     :param options:
     :param url:
     :param filename:
     """
+
     return Provider(
         options["monitor_long"],
         options["monitor_height"],
@@ -42,7 +45,6 @@ def generate_class(options:dict, url:str, filename:str) -> object:
         url,
         filename,
         options["system"],
-
     )
 
 
@@ -57,14 +59,12 @@ def dynamic_import(module: str):
         print(f"Oops {error} ocurred.")
 
 
-
-def set_image(options: dict):
+def set_image(options: object):
     """set_image.
 
     :param options:
     """
-    provider = options["provider"]
-    match provider:
+    match options["provider"]:
         case "wallhaven":
             from wmwc.providers.wallhaven import run
             run(options)
