@@ -1,6 +1,6 @@
 from urllib.request import urlopen
 
-from wmwc import helpers
+from wallger import helpers
 
 URL = "https://source.unsplash.com/random/"
 

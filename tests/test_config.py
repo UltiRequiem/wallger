@@ -1,6 +1,6 @@
 import unittest
 
-from wmwc import helpers
+from wallger import helpers
 
 msg = "Should be one of them."
 PROVIDERS = ["wallhaven", "unsplash", "local"]

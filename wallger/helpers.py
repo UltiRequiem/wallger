@@ -2,7 +2,7 @@ import json
 from importlib import import_module
 from os.path import expanduser
 
-from wmwc.providers.provider import Provider
+from wallger.providers.provider import Provider
 
 
 def get_config_file():
@@ -45,11 +45,11 @@ def dynamic_import(module):
 def set_image(options):
     provider = options["provider"]
     if provider ==  "wallhaven":
-        from wmwc.providers.wallhaven import run
+        from wallger.providers.wallhaven import run
         run(options)
     if provider == "unsplash":
-        from wmwc.providers.unsplash import run
+        from wallger.providers.unsplash import run
         run(options)
     if provider == "local":
-        from wmwc.providers.local import run
+        from wallger.providers.local import run
         run(options)
