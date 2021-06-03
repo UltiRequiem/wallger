@@ -24,19 +24,19 @@ If you are In Gnome or Mate you don't need to do that.
 - Clone the repository somewhere:
 
 ```bash
-git clone https://github.com/ultirequiem/wmwc ~/Documents/wmwc
+git clone https://github.com/ultirequiem/wallger ~/Documents/wallger
 ```
 
 - Install the requirements:
 
 ```bash
-cd ~/Documents/wmwc ; pip3 install -r requirements.txt
+cd ~/Documents/wallger ; pip3 install -r requirements.txt
 ```
 
-- Copy the example [config](./doc/config) in `~/.config/wm-wallpaper-changer`:
+- Copy the example [config](./doc/config.json) in `~/.config/wm-wallpaper-changer/`:
 
 ```bash
-cp ~/Documents/wmwc/doc/config.json ~/.config/wm-wallpaper-changer/config.json
+cp ~/Documents/wallger/doc/config.json ~/.config/wallger/config.json
 ```
 
 - Choose the Wallpaper provider you want and place the resolution of your monitor in the configuration file.
@@ -44,8 +44,11 @@ cp ~/Documents/wmwc/doc/config.json ~/.config/wm-wallpaper-changer/config.json
 - Set an alias:
 
 ```bash
-echo alias wmwc='python3 ~/Documents/wmwc/main.py' >> ~/.bashrc
+echo alias wallger='python3 ~/Documents/wallger/main.py' >> ~/.bashrc
 ```
 
 Done! Now you can call `wallger` everywhere.
 If you want to see some interesting use cases check [this](https://github.com/UltiRequiem/wallger/tree/master/doc).
+
+If you have Python3.10 you may be wanna try this branch:
+https://github.com/UltiRequiem/wallger/tree/python310
