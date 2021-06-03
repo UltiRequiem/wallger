@@ -1,4 +1,9 @@
 # Wallger: The Wallpaper Changer
+<p>
+<a href="https://github.com/UltiRequiem/wallger/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
+<a href="https://github.com/UltiRequiem/wallger"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href="https://github.com/UltiRequiem/wallger"><img alt="Code style: black" src="https://img.shields.io/tokei/lines/github.com/UltiRequiem/wallger?color=blue&label=Total%20Lines"></a>
+</p>
 
 <div align="center">
 <a href="https://youtu.be/GtO8Rp69gHw">
