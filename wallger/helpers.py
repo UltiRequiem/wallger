@@ -14,7 +14,7 @@ def get_config_file():
         print("No config.")
 
 
-def get_config(secction: str, option: dict):
+def get_config(secction: str, option: str):
     """get_config.
 
     :param secction:
