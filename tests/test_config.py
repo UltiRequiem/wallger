@@ -21,18 +21,8 @@ class TestConfig(unittest.TestCase):
     def test_providers(self):
         self.assertIn(options["provider"].lower(), PROVIDERS, msg)
 
-  #  def test_monitor_long(self):
-   #     self.assertTrue(options["monitor_long"].isnumeric())
-
-#    def test_monitor_height(self):
- #       self.assertTrue(options["monitor_height"].isnumeric())
-
     def test_topic(self):
         self.assertFalse(options["topic"].isnumeric())
-
- #   def test_purity(self):
-  #      self.assertIn(options["nfsw"].lower(), ["true", "false"], msg)
-
 
 if __name__ == "__main__":
     unittest.main()
