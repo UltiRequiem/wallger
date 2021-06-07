@@ -12,6 +12,6 @@ setup(
     keywords=["unsplash", "wallhaven", "feh", "wallpaper", "cli"],
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    entry_points={"console_scripts": ["wallger = wallger.wallger:main"]},
+    entry_points={"console_scripts": ["wallger = wallger.run:main"]},
     install_requires=["requests==2.25.1"],
 )
