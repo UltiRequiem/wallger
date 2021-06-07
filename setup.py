@@ -1,8 +1,5 @@
-from setuptools import setup, find_packages
-
-setup(name="wmwc", packages=find_packages())
-
 from setuptools import setup
+
 
 setup(
     name="wallger",
@@ -12,7 +9,7 @@ setup(
     description="Wallpaper changer for Linux, get images from Wallhaven, Unsplash and others!",
     author="Eliaz Bobadilla",
     url="https://github.com/UltiRequiem/wallger",
-    keywords=["unsplash","wallhaven","feh", "wallpaper","cli"],
+    keywords=["unsplash", "wallhaven", "feh", "wallpaper", "cli"],
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     entry_points={"console_scripts": ["wallger = wallger.wallger:main"]},
