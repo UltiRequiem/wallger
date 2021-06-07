@@ -14,10 +14,10 @@ files = [
 ]
 
 
-def check_format():
+def format():
     for i in files:
-        system(f"pycodestyle --show-source --show-pep8 --format=default {i}")
+        system(f"autopep8 --in-place --aggressive {i}")
 
 
 if __name__ == "__main__":
-    check_format()
+    format()

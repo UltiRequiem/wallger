@@ -24,7 +24,7 @@ def get_config(secction: str, option: str):
     json_data = get_config_file()
     try:
         return json_data[secction][option]
-    except:
+    except BaseException:
         return "none"
 
 
