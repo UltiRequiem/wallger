@@ -1,10 +1,11 @@
 from setuptools import setup
+from wallger.version import __version__
 
 
 setup(
     name="wallger",
     packages=["wallger"],
-    version="0.4.0",
+    version=__version__,
     license="MIT",
     description="Wallpaper changer for Linux, get images from Wallhaven, Unsplash and others!",
     author="Eliaz Bobadilla",
