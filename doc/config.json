@@ -1,15 +1,15 @@
 {
   "monitor": {
-    "long":1600,
-    "height":900
+    "long": 1600,
+    "height": 900
   },
   "wallpaper": {
-    "provider":"wallhaven",
-    "local":"/home/zero/Disk/Sabare/Wallpapers",
-    "topic":"anime",
-    "nfsw":false
+    "provider": "wallhaven",
+    "local": "/home/zero/Disk/Sabare/Wallpapers",
+    "topic": "anime",
+    "nfsw": false
   },
   "misc": {
-    "system":"wm"
+    "system": "wm"
   }
 }

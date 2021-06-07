@@ -24,5 +24,6 @@ class TestConfig(unittest.TestCase):
     def test_topic(self):
         self.assertFalse(options["topic"].isnumeric())
 
+
 if __name__ == "__main__":
     unittest.main()

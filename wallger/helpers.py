@@ -1,15 +1,14 @@
 import json
 from importlib import import_module
 from os.path import expanduser
-
-from wallger.providers.provider import Provider
+import wallger.providers
 
 
 def get_config_file():
     """get_config_file."""
     try:
-        with open(expanduser("~/.config/wallger/config.json"), "r") as json_data:
-            return json.load(json_data)
+        with open(expanduser("~/.config/wallger/config.json"), "r") as config:
+            return json.load(config)
     except FileNotFoundError:
         print("No config.")
 
@@ -39,7 +38,7 @@ def generate_class(options: dict, url: str, filename: str):
     :param filename:
     :type filename: str
     """
-    return Provider(
+    return wallger.providers.provider.Provider(
         options["monitor_long"],
         options["monitor_height"],
         options["topic"],
