@@ -17,3 +17,7 @@ def main():
         helpers.set_image(options)
     except Exception as exception:
         print(f"Oops!, {exception} ocurred.")
+
+
+if __name__ == "__main__":
+    main()
