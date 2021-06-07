@@ -1,4 +1,5 @@
 # Wallger: The Wallpaper Changer
+
 <p>
 <a href="https://github.com/UltiRequiem/wallger/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
 <a href="https://github.com/UltiRequiem/wallger"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
@@ -26,31 +27,15 @@ sudo pacman -S feh
 
 If you are In Gnome or Mate you don't need to do that.
 
-- Clone the repository somewhere:
-
 ```bash
-git clone https://github.com/ultirequiem/wallger ~/Documents/wallger
+sudo pip install wallger
 ```
 
-- Install the requirements:
-
-```bash
-cd ~/Documents/wallger ; pip3 install -r requirements.txt
-```
-
-- Copy the example [config](./doc/config.json) in `~/.config/wm-wallpaper-changer/`:
-
-```bash
-cp ~/Documents/wallger/doc/config.json ~/.config/wallger/config.json
-```
+- Copy the example [config](./doc/config.json) in `~/.config/wm-wallpaper-changer/`
 
 - Choose the Wallpaper provider you want and place the resolution of your monitor in the configuration file.
   You can investigate a little more about the parameters that the configuration receives in [docs](./doc).
 - Set an alias:
-
-```bash
-echo alias wallger='python3 ~/Documents/wallger/main.py' >> ~/.bashrc
-```
 
 Done! Now you can call `wallger` everywhere.
 If you want to see some interesting use cases check [this](https://github.com/UltiRequiem/wallger/tree/master/doc).
