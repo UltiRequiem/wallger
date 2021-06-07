@@ -16,7 +16,7 @@
 
 ## Install Instructions
 
-At the moment Walger only supports Gnome, Mate and any Window Manager(i3wm, bspwm, etc).
+At the moment Wallger only supports Gnome, Mate and any Window Manager(i3wm, bspwm, dwm, etc).
 If you are on a Window Manger you need to:
 
 - Install `feh` (Adapt it to your distribution):
@@ -35,7 +35,6 @@ sudo pip install wallger
 
 - Choose the Wallpaper provider you want and place the resolution of your monitor in the configuration file.
   You can investigate a little more about the parameters that the configuration receives in [docs](./doc).
-- Set an alias:
 
 Done! Now you can call `wallger` everywhere.
 If you want to see some interesting use cases check [this](https://github.com/UltiRequiem/wallger/tree/master/doc).
