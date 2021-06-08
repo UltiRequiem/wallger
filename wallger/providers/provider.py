@@ -3,6 +3,8 @@ from shutil import copyfileobj
 
 from requests import get
 
+GSETTINGS = "gsettings set org"
+
 
 class Provider:
     """Provider."""
@@ -59,19 +61,17 @@ class Provider:
         path_to_file = path.join(getcwd(), self.filename)
         return path_to_file
 
-    def setup_image(self, file_path: str):
+    def setup_image(self, path: str):
         """setup_image.
 
         :param file_path:
         :type file_path: str
         """
         if self.system == "wm":
-            system(f"feh --bg-fil {file_path}")
+            system(f"feh --bg-fil {path}")
         elif self.system == "gnome":
-            system(
-                f"gsettings set org.gnome.desktop.background picture-uri 'file://{file_path}'"
-            )
+            system(f"{GSETTINGS}.gnome.desktop.background picture-uri 'file://{path}'")
         elif self.system == "mate":
-            system(
-                f"gsettings set org.mate.background picture-filename 'file://{file_path}'"
-            )
+            system(f"{GSETTINGS}.mate.background picture-filename 'file://{path}'")
+        else:
+            print("That is not a valid system!")
