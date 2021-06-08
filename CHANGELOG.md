@@ -1,0 +1,7 @@
+# CHANGELOG
+
+## v. 0.5.3
+
+_08 Jun 2021_
+
+- Add CHANGELOG
