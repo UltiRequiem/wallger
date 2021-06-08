@@ -19,7 +19,7 @@
 
 ## Install Instructions
 
-At the moment Wallger only supports Gnome, Mate and any Window Manager(i3wm, bspwm, dwm, etc).
+At the moment Wallger only supports Gnome, Mate and any Window Manager (i3wm, bspwm, dwm, etc).
 If you are on a Window Manger you need to:
 
 - Install `feh` (Adapt it to your distribution):
