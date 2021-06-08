@@ -1,7 +1,7 @@
 import json
 from importlib import import_module
 from os.path import expanduser
-import wallger.providers
+from wallger.providers.provider import Provider
 
 
 def get_config_file():
@@ -38,7 +38,7 @@ def generate_class(options: dict, url: str, filename: str):
     :param filename:
     :type filename: str
     """
-    return wallger.providers.provider.Provider(
+    return Provider(
         options["monitor_long"],
         options["monitor_height"],
         options["topic"],
