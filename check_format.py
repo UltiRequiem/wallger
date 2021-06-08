@@ -21,3 +21,4 @@ def check_format():
 
 if __name__ == "__main__":
     check_format()
+    print("All done!")
