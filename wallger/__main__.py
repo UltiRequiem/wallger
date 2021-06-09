@@ -1,3 +1,3 @@
-from .run import main
+from wallger.run import main
 
 main()

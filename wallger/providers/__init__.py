@@ -72,8 +72,7 @@ class Provider:
         if self.system == "wm":
             system(f"feh --bg-fil {path}")
         elif self.system == "gnome":
-            system(
-                f"{GSETTINGS}.gnome.desktop.background picture-uri 'file://{path}'")
+            system(f"{GSETTINGS}.gnome.desktop.background picture-uri 'file://{path}'")
         elif self.system == "mate":
             system(f"{GSETTINGS}.mate.background picture-filename 'file://{path}'")
         else:
