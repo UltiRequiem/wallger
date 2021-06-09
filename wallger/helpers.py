@@ -1,7 +1,7 @@
 import json
 from importlib import import_module
 from os.path import expanduser
-from .providers import Provider
+from wallger.providers import Provider
 
 
 def get_config_file():

@@ -1,4 +1,4 @@
-from . import helpers
+from wallger import helpers
 
 options = {
     "monitor_long": helpers.get_config("monitor", "long"),
