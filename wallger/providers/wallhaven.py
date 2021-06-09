@@ -2,7 +2,7 @@ from random import choice
 
 from requests import get
 
-from wallger import helpers
+from .. import helpers
 
 SEARCH_URL = "https://wallhaven.cc/api/v1/search?q="
 
