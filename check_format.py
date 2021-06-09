@@ -8,7 +8,6 @@ files = [
     "wallger/version.py",
     "wallger/providers/__init__.py",
     "wallger/providers/local.py",
-    "wallger/providers/provider.py",
     "wallger/providers/unsplash.py",
     "wallger/providers/wallhaven.py",
 ]
