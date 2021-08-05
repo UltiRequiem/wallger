@@ -42,7 +42,7 @@ def run(opt: dict):
     :param options:
     :type options: dict
     """
-    custom_link = f"{SEARCH_URL}{opt['topic']}&atleast={opt['monitor_long']}x{opt['monitor_height']}&sorting=random"
+    custom_link = f"{SEARCH_URL}{opt['wallpaper']['topic']}&atleast={opt['monitor']['long']}x{opt['monitor']['height']}&sorting=random"
     image_link = get_image_link(custom_link)
     wallhaven = set_class(opt, image_link)
     wallhaven.download("wb")

@@ -12,7 +12,7 @@ def set_class(options: dict):
     :type options: dict
     """
     url = urlopen(
-        f"{URL}{options['monitor_long']}x{options['monitor_height']}"
+        f"{URL}{options['monitor']['long']}x{options['monitor']['height']}"
     ).geturl()
     return helpers.generate_class(options, url, "random")
 

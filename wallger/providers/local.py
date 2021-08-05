@@ -10,7 +10,7 @@ def set_class(options: dict):
     :param options:
     :type options: dict
     """
-    url = options["local"]
+    url = options["wallpaper"]["local"]
     filename = choice(popen(f"ls {url}").read().split())
     return helpers.generate_class(options, url, filename)
 

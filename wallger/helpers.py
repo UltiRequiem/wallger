@@ -4,8 +4,7 @@ from os.path import expanduser
 from wallger.providers import Provider
 
 
-def get_config_file():
-    """get_config_file."""
+def get_config_file() -> dict:
     try:
         with open(expanduser("~/.config/wallger/config.json"), "r") as config:
             return json.load(config)
@@ -13,35 +12,11 @@ def get_config_file():
         print("No config.")
 
 
-def get_config(secction: str, option: str):
-    """get_config.
-
-    :param secction:
-    :type secction: str
-    :param option:
-    :type option: dict
-    """
-    json_data = get_config_file()
-    try:
-        return json_data[secction][option]
-    except BaseException:
-        return "none"
-
-
 def generate_class(options: dict, url: str, filename: str):
-    """generate_class.
-
-    :param options:
-    :type options: dict
-    :param url:
-    :type url: str
-    :param filename:
-    :type filename: str
-    """
     return Provider(
-        options["monitor_long"],
-        options["monitor_height"],
-        options["topic"],
+        options["monitor"]["long"],
+        options["monitor"]["height"],
+        options["wallpaper"]["topic"],
         options["save"],
         url,
         filename,
@@ -50,11 +25,6 @@ def generate_class(options: dict, url: str, filename: str):
 
 
 def dynamic_import(module: str):
-    """dynamic_import.
-
-    :param module:
-    :type module: str
-    """
     try:
         return import_module(module)
     except ImportError as error:
@@ -62,12 +32,7 @@ def dynamic_import(module: str):
 
 
 def set_image(options: dict):
-    """set_image.
-
-    :param options:
-    :type options: dict
-    """
-    provider = options["provider"]
+    provider = options["wallpaper"]["provider"]
     if provider == "wallhaven":
         from wallger.providers.wallhaven import run
 
