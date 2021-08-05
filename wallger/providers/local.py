@@ -5,22 +5,11 @@ from wallger import helpers
 
 
 def set_class(options: dict):
-    """set_class.
-
-    :param options:
-    :type options: dict
-    """
     url = options["wallpaper"]["local"]
     filename = choice(popen(f"ls {url}").read().split())
     return helpers.generate_class(options, url, filename)
 
 
-def run(options: dict):
-    """run.
-
-    :param options:
-    :type options: dict
-    """
+def run(options: dict) -> None:
     local = set_class(options)
-    path = f"{local.url}/{local.filename}"
-    local.setup_image(path)
+    local.setup_image(f"{local.url}/{local.filename}")

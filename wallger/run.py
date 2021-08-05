@@ -1,9 +1,5 @@
-from . import helpers
+from .helpers import set_image,get_config_file
 
 
-def main():
-    helpers.set_image(helpers.get_config_file())
-
-
-if __name__ == "__main__":
-    main()
+def run():
+    set_image(get_config_file())
