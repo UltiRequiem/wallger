@@ -4,7 +4,7 @@ from wallger.version import __version__
 
 setup(
     name="wallger",
-    packages=["wallger"],
+    packages=["wallger", "wallger.providers"],
     version=__version__,
     license="MIT",
     description="Wallpaper changer for Linux, get images from Wallhaven, Unsplash and others!",
