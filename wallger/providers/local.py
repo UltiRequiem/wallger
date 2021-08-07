@@ -1,7 +1,7 @@
 from os import popen
 from random import choice
 
-from wallger import helpers
+from .. import helpers
 
 
 def set_class(options: dict):

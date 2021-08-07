@@ -1,7 +1,8 @@
 from json import load
 from importlib import import_module
 from os.path import expanduser
-from wallger.providers import Provider
+
+from .providers import Provider
 
 
 from .constants import CONFIG_PATH, ERROR_MESSAGE
