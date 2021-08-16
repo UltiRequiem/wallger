@@ -1,3 +1,7 @@
+"""
+General Constants
+"""
+
 import os
 
 CONFIG_PATH = os.path.expanduser("~/.config/wallger/config.json")

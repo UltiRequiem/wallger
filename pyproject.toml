@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/UltiRequiem/wallger"
 repository = "https://github.com/UltiRequiem/wallger"
-keywords = ["commands","wallpapers", "utilities", "cli"]
+keywords = ["commands", "wallpapers", "utilities", "cli"]
 include = ["LICENSE"]
 
 [tool.poetry.dependencies]

@@ -1,4 +1,6 @@
-# This file tells Python that this is a submodule
+"""
+This file tells Python that this is a submodule
+"""
 
 from .core import main
 
@@ -7,3 +9,6 @@ __version__ = "0.7.3"
 __description__ = (
     "Wallpaper changer for Linux, get images from Wallhaven, Unsplash and others!",
 )
+
+if __name__ == "__main__":
+    main()
