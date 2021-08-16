@@ -9,7 +9,7 @@ import sys
 import requests
 
 from .constants import CONFIG_PATH
-from .ui import cprint, error_print, magenta
+from .ui import cprint, error_print, magenta, yellow
 
 
 def get_config_file() -> dict:
@@ -29,14 +29,15 @@ def set_image(path) -> None:
 
 
 def fetch(url, path):
-    r = requests.get(url, stream=True)
-    r.raw.decode_content = True
+    data = requests.get(url, stream=True)
+    data.raw.decode_content = True
     with open(path, "wb") as file:
-        shutil.copyfileobj(r.raw, file)
+        shutil.copyfileobj(data.raw, file)
 
 
 def select_provider(config) -> None:
     cprint(f"Your Wallpaper Provider is {config['provider'].capitalize()}!")
+    cprint(f"The topic is {config['topic'].capitalize()}!", yellow)
 
     if config["provider"] == "wallhaven":
         from .wallhaven import wall_run
