@@ -29,10 +29,13 @@ be able to access the command throughout your system.
 
 ## Example Config
 
+This configuration goes in `~/.config/wallger/config.json`:
+
 ```json
 {
   "resolutions": [1600, 900],
   "provider": "wallhaven",
+  "path": "/home/zero/disk/sabare/wallger",
   "topic": "anime",
   "nfsw": false
 }
