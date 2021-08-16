@@ -1,20 +1,18 @@
-from json import load
-from importlib import import_module
-from os.path import expanduser
-
-from .providers import Provider
-
+import importlib
+import json
+import sys
 
 from .constants import CONFIG_PATH, ERROR_MESSAGE
+from .providers import Provider
 
 
 def get_config_file() -> dict:
     try:
         with open(CONFIG_PATH) as config:
-            return load(config)
-    except FileNotFoundError:
-        print(ERROR_MESSAGE)
-        raise BaseException("Config file not found!")
+            return json.load(config)
+    except FileNotFoundError as error:
+        print("Config file not found!")
+        sys.exit(0)
 
 
 def generate_class(options: dict, url: str, filename: str) -> Provider:
@@ -31,7 +29,7 @@ def generate_class(options: dict, url: str, filename: str) -> Provider:
 
 def dynamic_import(module: str):
     try:
-        return import_module(module)
+        return importlib.import_module(module)
     except ImportError as error:
         print(f"Oops {error} ocurred.")
 
