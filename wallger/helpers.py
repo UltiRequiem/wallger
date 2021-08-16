@@ -4,11 +4,12 @@ Helper functions
 import json
 import os
 import shutil
-import requests
 import sys
 
+import requests
+
 from .constants import CONFIG_PATH
-from .ui import error_print, cprint, magenta
+from .ui import cprint, error_print, magenta
 
 
 def get_config_file() -> dict:
@@ -27,7 +28,7 @@ def set_image(path) -> None:
     os.system(f"feh --bg-fill {path}")
 
 
-def download(url, path):
+def fetch(url, path):
     r = requests.get(url, stream=True)
     r.raw.decode_content = True
     with open(path, "wb") as file:

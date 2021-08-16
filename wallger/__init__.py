@@ -3,7 +3,6 @@ This file tells Python that this is a submodule
 """
 
 from .core import main
-
 from .wallhaven import wall_run
 
 # Package Data

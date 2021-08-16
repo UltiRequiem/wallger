@@ -1,7 +1,8 @@
-from .helpers import download, set_image
+import random
 
 import requests
-import random
+
+from .helpers import fetch, set_image
 
 
 def select_image(json: dict) -> str:
@@ -19,6 +20,6 @@ def wall_run(config) -> None:
 
     image_path = config["path"] + "/" + url.split("/")[len(url.split("/")) - 1]
 
-    download(url, image_path)
+    fetch(url, image_path)
 
     set_image(image_path)

@@ -2,7 +2,7 @@
 Colorama Configuration
 """
 
-from colorama import Style, Fore
+from colorama import Fore, Style
 
 # For export, and easily usage :)
 red, green, yellow, blue, magenta, cyan, normal, reset = (
