@@ -11,8 +11,8 @@ jobs:
 
       - name: Prepare
         run: |
-          sudo apt-get update      
-          pip install poetry chuy
+          sudo apt-get update        
+          pip install poetry pylint
           poetry install
       - name: Run pylint
         run: pylint wallger
