@@ -2,10 +2,12 @@
 Helper functions
 """
 import json
+import shutil
+import requests
 import sys
 
 from .constants import CONFIG_PATH
-from .ui import error_print, cprint
+from .ui import error_print, cprint, magenta
 
 
 def get_config_file() -> dict:
@@ -20,10 +22,19 @@ def get_config_file() -> dict:
         sys.exit(0)
 
 
+def download(url, path):
+    r = requests.get(url, stream=True)
+    r.raw.decode_content = True
+    with open(path, "wb") as file:
+        shutil.copyfileobj(r.raw, file)
+
+
 def select_provider(config) -> None:
     cprint(f"Your Wallpaper Provider is {config['provider'].capitalize()}!")
 
     if config["provider"] == "wallhaven":
         from .wallhaven import wall_run
 
-        wall_run()
+        wall_run(config)
+
+    cprint("Done", magenta)
