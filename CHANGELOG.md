@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## v.0.7.3
+## v.1.0.0
 
-Star using Poetry.
+Start using Poetry.
 
 ## v.0.5.3
 
