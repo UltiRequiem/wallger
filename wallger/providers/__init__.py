@@ -5,6 +5,7 @@ from shutil import copyfileobj
 
 from requests import get
 
+
 GSETTINGS = "gsettings set org"
 
 
