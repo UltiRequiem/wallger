@@ -24,7 +24,7 @@ def error_print(txt: str, color: str = red, brightness: str = normal, **kwargs) 
     print(f"{brightness}{color}{txt}{reset}", **kwargs)
 
 
-def cprint(txt: str, color: str = blue, brightness: str = normal, **kwargs) -> None:
+def cprint(txt, color: str = blue, brightness: str = normal, **kwargs) -> None:
     """
     Print the text with colors.
     """

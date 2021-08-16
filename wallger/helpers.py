@@ -16,5 +16,5 @@ def get_config_file() -> dict:
         error_print(" Your configuration is invalid!")
         sys.exit(0)
     except FileNotFoundError:
-        error_print("Config file not found!")
+        error_print(" Config file not found!")
         sys.exit(0)
