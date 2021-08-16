@@ -8,6 +8,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Lines of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/wallger?color=blue&label=Total%20Lines)
 
+https://user-images.githubusercontent.com/71897736/129631224-d4f00320-265c-4514-9086-a01b26cfdfd2.mp4
+
 ## Install
 
 You can install [Wallger](https://pypi.org/project/wallger) from PyPI like
