@@ -1,7 +1,9 @@
 # This file tells Python that this is a submodule
-from .run import *
-from .providers import *
 
+from .core import main
 
-
+# Package Data
 __version__ = "0.7.3"
+__description__ = (
+    "Wallpaper changer for Linux, get images from Wallhaven, Unsplash and others!",
+)
