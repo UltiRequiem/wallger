@@ -32,7 +32,7 @@ This configuration goes in `~/.config/wallger/config.json`:
 
 ```json
 {
-  "resolutions": [1600, 900],
+  "resolution": [1600, 900],
   "provider": "wallhaven",
   "path": "/home/zero/disk/sabare/wallger",
   "topic": "anime",

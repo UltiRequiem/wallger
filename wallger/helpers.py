@@ -2,6 +2,7 @@
 Helper functions
 """
 import json
+import os
 import shutil
 import requests
 import sys
@@ -20,6 +21,10 @@ def get_config_file() -> dict:
     except FileNotFoundError:
         error_print("Config file not found!")
         sys.exit(0)
+
+
+def set_image(path) -> None:
+    os.system(f"feh --bg-fill {path}")
 
 
 def download(url, path):
