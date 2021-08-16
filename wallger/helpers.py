@@ -37,4 +37,4 @@ def select_provider(config) -> None:
 
         wall_run(config)
 
-    cprint("Done", magenta)
+    cprint("Done!", magenta)
