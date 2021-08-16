@@ -1,7 +1,6 @@
 # Wallger: The Wallpaper Changer
 
 ![CodeQL](https://github.com/UltiRequiem/wallger/workflows/CodeQL/badge.svg)
-![PyTest](https://github.com/UltiRequiem/wallger/workflows/PyTest/badge.svg)
 ![Pylint](https://github.com/UltiRequiem/wallger/workflows/Pylint/badge.svg)
 [![Code Style](https://img.shields.io/badge/Code%20Style-Black-000000.svg)](https://github.com/psf/black)
 [![PyPi Version](https://img.shields.io/pypi/v/wallger)](https://pypi.org/project/wallger)
