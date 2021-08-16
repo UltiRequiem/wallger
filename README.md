@@ -27,6 +27,17 @@ pip install git+https:/github.com/UltiRequiem/wallger
 If you use Linux, you may need to install this with sudo to
 be able to access the command throughout your system.
 
+## Example Config
+
+```json
+{
+  "resolutions": [1600, 900],
+  "provider": "wallhaven",
+  "topic": "anime",
+  "nfsw": false
+}
+```
+
 ### License
 
 Wallger is licensed under the [MIT License](./LICENSE).
