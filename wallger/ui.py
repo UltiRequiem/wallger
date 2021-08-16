@@ -1,5 +1,5 @@
 """
-Here I define everything related to Colorama
+Colorama Configuration
 """
 
 from colorama import Style, Fore
@@ -22,6 +22,7 @@ def error_print(txt: str, color: str = red, brightness: str = normal, **kwargs) 
     Print the text with colors.
     """
     print(f"{brightness}{color}{txt}{reset}", **kwargs)
+
 
 def cprint(txt: str, color: str = blue, brightness: str = normal, **kwargs) -> None:
     """
