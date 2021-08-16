@@ -14,11 +14,16 @@ def get_config_file() -> dict:
             return json.load(config)
     except json.decoder.JSONDecodeError:
         error_print("Your configuration is invalid!")
+        sys.exit(0)
     except FileNotFoundError:
         error_print("Config file not found!")
-    finally:
         sys.exit(0)
 
 
 def select_provider(config) -> None:
     cprint(f"Your Wallpaper Provider is {config['provider'].capitalize()}!")
+
+    if config["provider"] == "wallhaven":
+        from .wallhaven import wall_run
+
+        wall_run()
