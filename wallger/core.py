@@ -2,13 +2,11 @@
 Core of the Project
 """
 
-from .helpers import get_config_file
-from .ui import cprint
+from .helpers import get_config_file, select_provider
 
 
 def main() -> None:
     """
     Initialize the Process
     """
-    config = get_config_file()
-    cprint(config)
+    select_provider(get_config_file())
