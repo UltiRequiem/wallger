@@ -1,4 +1,4 @@
-from .helpers import set_image,get_config_file
+from .helpers import set_image, get_config_file
 
 
 def run():

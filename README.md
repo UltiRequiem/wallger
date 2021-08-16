@@ -15,11 +15,11 @@
 </a>
 </div>
 
-<em>(To see a better quality version click on the gif)</em>
+## Install
 
-## Install Instructions
+At the moment Wallger only supports Gnome, Mate and any
+Window Manager (i3wm, bspwm, dwm, etc).
 
-At the moment Wallger only supports Gnome, Mate and any Window Manager (i3wm, bspwm, dwm, etc).
 If you are on a Window Manger you need to:
 
 - Install `feh` (Adapt it to your distribution):
@@ -31,16 +31,13 @@ sudo pacman -S feh
 If you are In Gnome or Mate you don't need to do that.
 
 ```bash
-sudo pip install wallger
+pip install wallger
 ```
 
 - Copy the example [config](./doc/config.json) in `~/.config/wm-wallpaper-changer/`
 
-- Choose the Wallpaper provider you want and place the resolution of your monitor in the configuration file.
-  You can investigate a little more about the parameters that the configuration receives in [docs](./doc).
+- Choose the Wallpaper provider you want and place the resolution of your monitor
+  in the configuration file.
 
-Done! Now you can call `wallger` everywhere.
-If you want to see some interesting use cases check [this](https://github.com/UltiRequiem/wallger/tree/master/doc).
-
-If you have Python3.10 you may be wanna try this branch:
-https://github.com/UltiRequiem/wallger/tree/python310
+You can investigate a little more about the parameters that the configuration
+receives in [docs](./doc).
