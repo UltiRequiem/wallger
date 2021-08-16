@@ -17,15 +17,15 @@ red, green, yellow, blue, magenta, cyan, normal, reset = (
 )
 
 
-def error_print(txt: str, color: str = red, brightness: str = normal, **kwargs) -> None:
-    """
-    Print the text with colors.
-    """
-    print(f"{brightness}{color}{txt}{reset}", **kwargs)
-
-
 def cprint(txt, color: str = blue, brightness: str = normal, **kwargs) -> None:
     """
     Print the text with colors.
     """
     print(f"{brightness}{color}{txt}{reset}", **kwargs)
+
+
+def error_print(txt: str, brightness: str = normal, **kwargs) -> None:
+    """
+    Print the text with colors.
+    """
+    cprint(txt, red, brightness, **kwargs)
