@@ -26,4 +26,4 @@ def wall_run(config) -> None:
 
     fetch(url, image_path)
 
-    set_image(image_path)
+    set_image(image_path, config["tool"])

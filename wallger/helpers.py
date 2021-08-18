@@ -24,8 +24,19 @@ def get_config_file() -> dict:
         sys.exit(0)
 
 
-def set_image(path) -> None:
-    os.system(f"feh --bg-fill {path}")
+def set_image(path, tool) -> None:
+    if tool == "feh":
+        os.system(f"feh --bg-fill {path}")
+    elif tool == "gnome":
+        os.system(
+            f"gsettings set org.gnome.desktop.background picture-uri 'file://{path}'"
+        )
+    elif tool == "mate":
+        os.system("gsettings set org.mate.background picture-filename 'file://{path}'")
+    elif tool == "kde":
+        cprint("KDE is not supported yet! But it will be soon :)")
+    else:
+        error_print(f"{tool} is Unknown tool!")
 
 
 def fetch(url, path):

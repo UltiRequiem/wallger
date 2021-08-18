@@ -38,9 +38,19 @@ This configuration goes in `~/.config/wallger/config.json`:
   "provider": "wallhaven",
   "path": "/home/zero/disk/sabare/wallger",
   "topic": "anime",
-  "nfsw": false
+  "tool": "feh",
+  "nsfw": false
 }
 ```
+
+- Resolution: The resolution of you monitor
+- Provider: It can be Wallhaven or Unsplash
+- Path: Where to save the images
+- Topic: The topic (Eg. "Math", "Code Geass", "Mirai Nikki")
+- Tool: The tool to change the Wallpaper. Options = ["feh","gnome","mate","kde"]
+- NSFW: No safe for work
+
+There are not default values.
 
 ### License
 
