@@ -1,3 +1,5 @@
 {
-  "lint": "pylint wallger"
+  "lint": "poetry pylint wallger",
+  "format": "poetry run black .",
+  "package": "poetry build && poetry publish"
 }
