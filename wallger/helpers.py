@@ -14,7 +14,7 @@ from .ui import cprint, error_print, magenta, yellow
 
 def get_config_file() -> dict:
     try:
-        with open(CONFIG_PATH) as config:
+        with open(CONFIG_PATH, encoding="UTF-8") as config:
             return json.load(config)
     except json.decoder.JSONDecodeError:
         error_print("Your configuration is invalid!")
