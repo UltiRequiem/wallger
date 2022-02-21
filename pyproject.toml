@@ -4,11 +4,11 @@ version = "1.2.0"
 description = "Wallpaper changer for Linux, get images from Wallhaven, Unsplash and others!"
 authors = ["Eliaz Bobadilla <eliaz.bobadilladev@gmail.com>"]
 license = "MIT"
-readme = "README.md"
+readme = "readme.md"
 homepage = "https://github.com/UltiRequiem/wallger"
 repository = "https://github.com/UltiRequiem/wallger"
 keywords = ["commands", "wallpapers", "utilities", "cli"]
-include = ["LICENSE"]
+include = ["license"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
