@@ -25,6 +25,8 @@ def get_config_file() -> dict:
 
 
 def set_image(path, tool) -> None:
+    tool = tool.lower()
+
     if tool == "feh":
         os.system(f"feh --bg-fill {path}")
     elif tool == "gnome":
@@ -42,6 +44,7 @@ def set_image(path, tool) -> None:
 def fetch(url, path):
     data = requests.get(url, stream=True)
     data.raw.decode_content = True
+
     with open(path, "wb") as file:
         shutil.copyfileobj(data.raw, file)
 
@@ -50,7 +53,9 @@ def select_provider(config) -> None:
     cprint(f"Your Wallpaper Provider is {config['provider'].capitalize()}!")
     cprint(f"The topic is {config['topic'].capitalize()}!", yellow)
 
-    if config["provider"] == "wallhaven":
+    provider = config["provider"].lower()
+
+    if provider == "wallhaven":
         from .wallhaven import wall_run
 
         wall_run(config)

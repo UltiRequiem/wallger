@@ -1,9 +1,9 @@
-name: Pylint
+name: CI
 
 on: [push, pull_request]
 
 jobs:
-  luacheck:
+  lint:
     name: Pylint
     runs-on: ubuntu-latest
     steps:
