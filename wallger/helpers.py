@@ -42,7 +42,7 @@ def set_image(path, tool) -> None:
 
 
 def fetch(url, path):
-    data = requests.get(url, stream=True)
+    data = requests.get(url, stream=True, timeout=30)
     data.raw.decode_content = True
 
     with open(path, "wb") as file:

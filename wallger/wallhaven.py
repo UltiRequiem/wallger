@@ -14,7 +14,7 @@ def construct_url(topic, long, height) -> str:
 
 
 def get_image_link(json_url: str) -> str:
-    return select_image(requests.get(json_url).json())
+    return select_image(requests.get(json_url, timeout=30).json())
 
 
 def wall_run(config) -> None:
