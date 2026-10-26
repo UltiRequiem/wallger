@@ -11,13 +11,13 @@ keywords = ["commands", "wallpapers", "utilities", "cli"]
 include = ["license"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.9"
 requests = "^2.26.0"
 colorama = "^0.4.4"
 
-[tool.poetry.dev-dependencies]
-black = "^21.7b0"
-pylint = "^2.9.6"
+[tool.poetry.group.dev.dependencies]
+black = "*"
+pylint = "*"
 
 [tool.poetry.scripts]
 wallger = 'wallger:main'
