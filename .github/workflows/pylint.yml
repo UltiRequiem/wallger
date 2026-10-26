@@ -7,7 +7,7 @@ jobs:
     name: Pylint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
 
       - name: Prepare
         run: |
@@ -15,3 +15,13 @@ jobs:
           poetry install
       - name: Run pylint
         run: pylint wallger
+
+  ci:
+    name: CI
+    if: always()
+    needs: [lint]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every job to pass
+        run: |
+          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "true" ]; then exit 1; fi
