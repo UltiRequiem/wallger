@@ -13,7 +13,7 @@ include = ["license"]
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
 requests = "^2.26.0"
-colorama = "^0.4.4"
+colores = "^0.1.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "*"
