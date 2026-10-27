@@ -1,15 +1,16 @@
 """
 Helper functions
 """
+
 import json
 import os
 import shutil
 import sys
 
 import requests
+from colores import MAGENTA, RED, YELLOW, colorized_print
 
 from .constants import CONFIG_PATH
-from .ui import cprint, error_print, magenta, yellow
 
 
 def get_config_file() -> dict:
@@ -17,10 +18,10 @@ def get_config_file() -> dict:
         with open(CONFIG_PATH, encoding="UTF-8") as config:
             return json.load(config)
     except json.decoder.JSONDecodeError:
-        error_print("Your configuration is invalid!")
+        colorized_print("Your configuration is invalid!", RED)
         sys.exit(0)
     except FileNotFoundError:
-        error_print("Config file not found!")
+        colorized_print("Config file not found!", RED)
         sys.exit(0)
 
 
@@ -36,9 +37,9 @@ def set_image(path, tool) -> None:
     elif tool == "mate":
         os.system("gsettings set org.mate.background picture-filename 'file://{path}'")
     elif tool == "kde":
-        cprint("KDE is not supported yet! But it will be soon :)")
+        colorized_print("KDE is not supported yet! But it will be soon :)")
     else:
-        error_print(f"{tool} is Unknown tool!")
+        colorized_print(f"{tool} is Unknown tool!", RED)
 
 
 def fetch(url, path):
@@ -50,8 +51,8 @@ def fetch(url, path):
 
 
 def select_provider(config) -> None:
-    cprint(f"Your Wallpaper Provider is {config['provider'].capitalize()}!")
-    cprint(f"The topic is {config['topic'].capitalize()}!", yellow)
+    colorized_print(f"Your Wallpaper Provider is {config['provider'].capitalize()}!")
+    colorized_print(f"The topic is {config['topic'].capitalize()}!", YELLOW)
 
     provider = config["provider"].lower()
 
@@ -60,4 +61,4 @@ def select_provider(config) -> None:
 
         wall_run(config)
 
-    cprint("Done!", magenta)
+    colorized_print("Done!", MAGENTA)
